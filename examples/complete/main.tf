@@ -28,6 +28,7 @@ provider "aws" {
 module "network" {
   source = "kwaziio/network/aws"
 
+  network_enable_nat         = true
   network_primary_cidr_block = "10.0.0.0/16"
   network_tags_name          = "example-network"
   network_trusted_ipv4_cidrs = ["0.0.0.0/0"]
